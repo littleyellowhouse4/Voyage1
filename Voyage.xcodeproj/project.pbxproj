@@ -17,7 +17,6 @@
 		18F6F06924D1C3360068AFA2 /* VoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F06824D1C3360068AFA2 /* VoyageTests.swift */; };
 		18F6F07424D1C3360068AFA2 /* VoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F07324D1C3360068AFA2 /* VoyageUITests.swift */; };
 		18F6F08624D1D4C70068AFA2 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F08524D1D4C70068AFA2 /* CountryViewController.swift */; };
-		18F6F08824D1D4DF0068AFA2 /* FranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F08724D1D4DF0068AFA2 /* FranceViewController.swift */; };
 		18F6F08A24D1D4F60068AFA2 /* ItalyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F08924D1D4F60068AFA2 /* ItalyViewController.swift */; };
 		18F6F08C24D1D50C0068AFA2 /* SpainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F08B24D1D50C0068AFA2 /* SpainViewController.swift */; };
 		18F6F08E24D1D5240068AFA2 /* ChinaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F08D24D1D5240068AFA2 /* ChinaViewController.swift */; };
@@ -58,7 +57,6 @@
 		18F6F07324D1C3360068AFA2 /* VoyageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageUITests.swift; sourceTree = "<group>"; };
 		18F6F07524D1C3360068AFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18F6F08524D1D4C70068AFA2 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
-		18F6F08724D1D4DF0068AFA2 /* FranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranceViewController.swift; sourceTree = "<group>"; };
 		18F6F08924D1D4F60068AFA2 /* ItalyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalyViewController.swift; sourceTree = "<group>"; };
 		18F6F08B24D1D50C0068AFA2 /* SpainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainViewController.swift; sourceTree = "<group>"; };
 		18F6F08D24D1D5240068AFA2 /* ChinaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinaViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				18F6F05024D1C3330068AFA2 /* SceneDelegate.swift */,
 				18F6F05224D1C3330068AFA2 /* ViewController.swift */,
 				18F6F08524D1D4C70068AFA2 /* CountryViewController.swift */,
-				18F6F08724D1D4DF0068AFA2 /* FranceViewController.swift */,
 				18F6F08924D1D4F60068AFA2 /* ItalyViewController.swift */,
 				18F6F08B24D1D50C0068AFA2 /* SpainViewController.swift */,
 				18F6F08D24D1D5240068AFA2 /* ChinaViewController.swift */,
@@ -283,7 +280,6 @@
 				18F6F09024D1D5360068AFA2 /* UKViewController.swift in Sources */,
 				18F6F05324D1C3330068AFA2 /* ViewController.swift in Sources */,
 				18F6F08A24D1D4F60068AFA2 /* ItalyViewController.swift in Sources */,
-				18F6F08824D1D4DF0068AFA2 /* FranceViewController.swift in Sources */,
 				18F6F04F24D1C3330068AFA2 /* AppDelegate.swift in Sources */,
 				18F6F05924D1C3330068AFA2 /* Voyage.xcdatamodeld in Sources */,
 				18F6F08624D1D4C70068AFA2 /* CountryViewController.swift in Sources */,

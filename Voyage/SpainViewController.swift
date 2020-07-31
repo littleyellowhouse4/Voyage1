@@ -10,6 +10,26 @@ import UIKit
 
 class SpainViewController: UIViewController {
 
+    @IBOutlet weak var SpainHeaderMain: UILabel!
+    
+    
+    @IBAction func SpainCovidButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func SpainBackButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func SpainEssentialsButton(_ sender: Any) {
+    }
+    
+    @IBAction func SpainActivitiesButton(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var SpainMainImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

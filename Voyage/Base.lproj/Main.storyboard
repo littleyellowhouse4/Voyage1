@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Voyage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLj-eR-a9b">
@@ -22,21 +22,25 @@
                                     <color key="titleColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="OpeningButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JuX-or-UVp"/>
                                     <segue destination="aqX-AW-Oxa" kind="show" id="xDX-Qd-ccJ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2020-07-27 at 1.47.05 PM" translatesAutoresizingMaskIntoConstraints="NO" id="RKk-2w-YJc">
-                                <rect key="frame" x="-44" y="-87" width="503" height="1070"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2020-07-27 at 1.47.05 PM" translatesAutoresizingMaskIntoConstraints="NO" id="RKk-2w-YJc">
+                                <rect key="frame" x="-34" y="138" width="483" height="634"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117647058818" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="iconImage" destination="RKk-2w-YJc" id="ZPN-aL-q5U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4239" y="131"/>
+            <point key="canvasLocation" x="-4239.130434782609" y="130.58035714285714"/>
         </scene>
         <!--CountryViewController-->
         <scene sceneID="HV1-0q-Y0W">
@@ -51,6 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Screen Shot 2020-07-29 at 10.01.15 PM"/>
                                 <connections>
+                                    <action selector="ItalyFlagMainButton:" destination="aqX-AW-Oxa" eventType="touchUpInside" id="1y7-aU-jV2"/>
                                     <segue destination="3F1-8i-VZQ" kind="show" id="c2E-zS-kKF"/>
                                 </connections>
                             </button>
@@ -59,6 +64,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Screen Shot 2020-07-29 at 5.26.17 PM"/>
                                 <connections>
+                                    <action selector="SpainFlagMainButton:" destination="aqX-AW-Oxa" eventType="touchUpInside" id="nPW-op-Tz6"/>
                                     <segue destination="RiX-6U-GbK" kind="show" id="xri-J6-GaD"/>
                                 </connections>
                             </button>
@@ -67,18 +73,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Screen Shot 2020-07-29 at 10.09.00 PM"/>
                                 <connections>
+                                    <action selector="ChinaMainFlagButton:" destination="aqX-AW-Oxa" eventType="touchUpInside" id="SNu-Vr-PVI"/>
                                     <segue destination="ut6-bv-wya" kind="show" id="abG-Ty-9YT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Italy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zde-Md-4Z6">
-                                <rect key="frame" x="306" y="359" width="52" height="21"/>
+                                <rect key="frame" x="306" y="359" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="United Kingdom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEn-sm-DdC">
-                                <rect key="frame" x="30" y="652" width="164" height="24"/>
+                                <rect key="frame" x="20" y="636" width="164" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -89,6 +96,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Screen Shot 2020-07-29 at 10.02.08 PM"/>
                                 <connections>
+                                    <action selector="UKFlagMainButton:" destination="aqX-AW-Oxa" eventType="touchUpInside" id="X5i-ZJ-PkL"/>
                                     <segue destination="nRK-BO-T3V" kind="show" id="NLd-lH-CzH"/>
                                 </connections>
                             </button>
@@ -107,21 +115,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="China" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwc-kh-JcP">
-                                <rect key="frame" x="296" y="652" width="53" height="19"/>
+                                <rect key="frame" x="295" y="636" width="53" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLV-dZ-shQ">
+                                <rect key="frame" x="50" y="24" width="63" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="ChinaBackButton:" destination="ut6-bv-wya" eventType="touchUpInside" id="Dih-m0-ROt"/>
+                                    <action selector="CountryBackButton:" destination="aqX-AW-Oxa" eventType="touchUpInside" id="OAp-10-fMf"/>
+                                    <action selector="UKBackButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="DLo-9d-yeG"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="kVT-NG-6DQ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117647058818" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="jvy-IO-ySF"/>
                     </view>
                     <navigationItem key="navigationItem" id="xg2-CS-4ks"/>
+                    <connections>
+                        <outlet property="ChinaFlagTitle" destination="jwc-kh-JcP" id="FL6-qg-0ZW"/>
+                        <outlet property="ItalyFlagTitle" destination="zde-Md-4Z6" id="7Tl-4G-uKe"/>
+                        <outlet property="SpainFlagTitle" destination="K52-qL-zgH" id="8EL-z0-rEm"/>
+                        <outlet property="UKFlagTitle" destination="hEn-sm-DdC" id="SRm-9i-TsB"/>
+                        <outlet property="WhichCountryText" destination="Izg-MP-RmI" id="52P-8d-ISX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISD-Xn-Ebb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3446.376811594203" y="145.98214285714286"/>
+            <point key="canvasLocation" x="-2696" y="131"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IaX-qw-Vb6">
@@ -144,9 +171,10 @@
                                     <segue destination="3F1-8i-VZQ" kind="show" id="jjv-QT-VMO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-aD-PRI">
-                                <rect key="frame" x="20" y="116" width="374" height="704"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-aD-PRI">
+                                <rect key="frame" x="20" y="116" width="374" height="703"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <mutableString key="text">ALL international and domestic flights arriving in Italy's major airports will have a temperature screening . Passengers on the U.S bound flights whose temperature is higher than 99.5 Degrees Fahrenheit will not be permitted to board. Travelers should be prepared for additional travel restrictions with little to no advance notice. Flights from the People's Republic of China (PRC) as well as Taiwan are suspended. Although there are these restrictions, there are no restrictions for entry based on your nationality. Passengers exhibiting symptoms such as (fever, respiratory congestion, coughing, sneezing )  will have a medical examination. The Centers for Disease Control (CDC) has issued a Level 3 Warning recommending travelers defer all non-essential travel to Italy due to a recent outbreak of COVID-19. We advise that travelers do not travel to  Lombardy and Veneto for they are at a Level 4 Warning.  
 </mutableString>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
@@ -161,7 +189,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="8Pf-ZX-oaJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="ceV-zR-VUW"/>
@@ -197,17 +225,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCf-bo-6Lf">
-                                <rect key="frame" x="20" y="125" width="374" height="240"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-fd-HhQ">
+                                <rect key="frame" x="82" y="361" width="250" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Cultural norms in Italy: it is common for italian friends and family to kiss on their cheek when they meet, regardless of gender. Stand up out of respect when an Older enters the room.  Italians are known for using the most body language of all European nations.</string>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-fd-HhQ">
-                                <rect key="frame" x="20" y="359" width="233" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Common Phrases: 
 Thank you - Grazie
 You’re welcome - Prego
@@ -219,17 +240,27 @@ Excuse me - Mi scusi
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eu-cA-fYS">
-                                <rect key="frame" x="27" y="546" width="361" height="235"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eu-cA-fYS">
+                                <rect key="frame" x="27" y="562" width="361" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Vaccines- CDC recommends getting the following vaccines for travel to italy:  Hepatitis A, Hepatitis B, Rabies, Meningitis, Polio, Measles, Mumps and Rubella (MMR), TDAP (tetanus, diphtheria and pertussis), Chickenpox, Shingles, Pneumonia and Influenza.
 </string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCf-bo-6Lf">
+                                <rect key="frame" x="20" y="125" width="374" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Cultural norms in Italy: it is common for italian friends and family to kiss on their cheek when they meet, regardless of gender. Stand up out of respect when an Older enters the room.  Italians are known for using the most body language of all European nations.</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="zIq-i5-wso"/>
                     </view>
                     <navigationItem key="navigationItem" id="ma1-mO-K9L"/>
@@ -246,8 +277,8 @@ Excuse me - Mi scusi
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Italy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-z4-z4j">
-                                <rect key="frame" x="145" y="72" width="125" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🇮🇹Italy🇮🇹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-z4-z4j">
+                                <rect key="frame" x="115" y="72" width="186" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="37"/>
                                 <nil key="textColor"/>
@@ -261,6 +292,7 @@ Excuse me - Mi scusi
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="ItalyCovidButton:" destination="3F1-8i-VZQ" eventType="touchUpInside" id="nRo-dJ-gIe"/>
                                     <segue destination="ILL-OF-uGh" kind="show" id="vK8-cH-YJa"/>
                                 </connections>
                             </button>
@@ -272,6 +304,7 @@ Excuse me - Mi scusi
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="ItalyEssentialsButton:" destination="3F1-8i-VZQ" eventType="touchUpInside" id="3vg-pt-c9t"/>
                                     <segue destination="e0U-64-P74" kind="show" id="rUa-dn-nje"/>
                                 </connections>
                             </button>
@@ -283,6 +316,7 @@ Excuse me - Mi scusi
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="ItalyActivitiesButton:" destination="3F1-8i-VZQ" eventType="touchUpInside" id="bLN-2Y-okQ"/>
                                     <segue destination="vMI-Dy-OGV" kind="show" id="B35-1u-Nxa"/>
                                 </connections>
                             </button>
@@ -290,11 +324,26 @@ Excuse me - Mi scusi
                                 <rect key="frame" x="27" y="559" width="361" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7M-3u-ZiI">
+                                <rect key="frame" x="20" y="20" width="63" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="ItalyBackButton:" destination="3F1-8i-VZQ" eventType="touchUpInside" id="QwC-nt-ubS"/>
+                                    <action selector="UKBackButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="kFf-c9-DuL"/>
+                                    <segue destination="aqX-AW-Oxa" kind="show" id="AHs-oR-2GU"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="sDm-OT-oNm"/>
                     </view>
                     <navigationItem key="navigationItem" id="cLX-NW-GcO"/>
+                    <connections>
+                        <outlet property="ItalyImageMain" destination="kdb-LX-ahy" id="6Mg-sH-coK"/>
+                        <outlet property="ItalyLabel" destination="HQ7-z4-z4j" id="nvc-Hs-naz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bae-Cp-dTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,23 +375,24 @@ Excuse me - Mi scusi
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZW-F2-7GQ">
-                                <rect key="frame" x="20" y="67" width="374" height="704"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZW-F2-7GQ">
+                                <rect key="frame" x="20" y="162" width="374" height="487"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <mutableString key="text">Spain cases have surged and it threatens tourism recovery. Spain sparked fear of a second wave. The city of Barcelona alone is seeing more than 1,000 new cases every day. Will advise to go when cases go down. U.S. citizens and U.S. LPRs will be permitted to return to the United States from the United Kingdom, Ireland, and the European Schengen area, which includes Spain. The U.S. Department of Homeland Security (DHS) issued instructions requiring U.S. passengers who have been in the United Kingdom, Ireland, and the Schengen area to travel through select airports where the U.S. government has implemented enhanced screening procedures.</mutableString>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="E6t-1s-jJk"/>
                     </view>
                     <navigationItem key="navigationItem" id="ucO-KU-fJ0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvp-3q-v4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1103" y="-519"/>
+            <point key="canvasLocation" x="-1104.3478260869565" y="-519.64285714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ndu-UQ-8NA">
@@ -370,31 +420,11 @@ Excuse me - Mi scusi
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sf-rV-K6k">
-                                <rect key="frame" x="20" y="105" width="374" height="174"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sf-rV-K6k">
+                                <rect key="frame" x="20" y="119" width="374" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Culture norm - One of its best known cultural traditions is the siesta. Workers and students often go home around lunch time to spend a few hours resting or socialising before returning to their work or studies. </string>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3c-2M-mAl">
-                                <rect key="frame" x="20" y="273" width="394" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Common phrases: 
-Where is  - donde esta
-Where are the restroom- donde estan los banos publicos
-When is the flight- cuando sale el vuelo
-How much does a round trip ticket costs- cuanto cuesta un boleta de ida y vuelta
-Where is the taxi stop- donde esta la parada de taxis</string>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi6-Rc-V6q">
-                                <rect key="frame" x="20" y="537" width="361" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Vaccines: Some vaccines are recommended or required for spain. The CDC and who recommend the following vaccinations for Spain is Hepatitis A, Hepatitis, Hepatitis B, Rabies, Meningitis, Polio, Measles, Mumps and Rubella (MMR), TDAP (Tetanus, Diphtheria and Pertussis), Chickenpox, Shingles, Pneumonia and Influenza.</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -409,8 +439,34 @@ Where is the taxi stop- donde esta la parada de taxis</string>
                                     <segue destination="Bbf-75-P5a" kind="show" id="HKq-8u-dXd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jec-Uw-y7E">
+                                <rect key="frame" x="45" y="622" width="325" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Things to wear in Spain are denim shorts, tuck in shirt, sundresses, and sunglasses. 
+
+The most spoken language in Spain is Spanish.
+</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3c-2M-mAl">
+                                <rect key="frame" x="17" y="319" width="381" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Common phrases: 
+Where is  - donde esta
+Where are the restroom- donde estan los banos publicos
+When is the flight- cuando sale el vuelo
+How much does a round trip ticket costs- cuanto cuesta un boleta de ida y vuelta
+Where is the taxi stop- donde esta la parada de taxis</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="DXC-3Z-0oh"/>
                     </view>
                     <navigationItem key="navigationItem" id="eBp-04-NI0"/>
@@ -438,19 +494,24 @@ Where is the taxi stop- donde esta la parada de taxis</string>
                                     <segue destination="Iu0-H7-7TC" kind="show" id="ogm-Iw-dft"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jec-Uw-y7E">
-                                <rect key="frame" x="43" y="100" width="325" height="345"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Essentials " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tl-mY-hjC">
+                                <rect key="frame" x="72" y="67" width="266" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Things to wear in Spain are denim shorts, tuck in shirt, sundresses, and sunglasses. 
-
-The most spoken language in Spain is spanish by all spaniards.
-</string>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWf-Hb-8hB">
+                                <rect key="frame" x="33" y="194" width="361" height="254"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Vaccines: Some vaccines are recommended or required for spain. The CDC and who recommend the following vaccinations for Spain is Hepatitis A, Hepatitis, Hepatitis B, Rabies, Meningitis, Polio, Measles, Mumps and Rubella (MMR), TDAP (Tetanus, Diphtheria and Pertussis), Chickenpox, Shingles, Pneumonia and Influenza.</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="XVf-iN-N4l"/>
                     </view>
                     <navigationItem key="navigationItem" id="umI-qa-HoR"/>
@@ -514,28 +575,29 @@ The most spoken language in Spain is spanish by all spaniards.
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore the sunken city of Baia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-71-UAd">
                                 <rect key="frame" x="26" y="513" width="119" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upk-Mg-GAK">
-                                <rect key="frame" x="26" y="664" width="368" height="206"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">CHEAPEST TIME OF THE YEAR: The cheapest time to visit spain is usually from december to march. You can also enjoy affordable flights and hotels in early spring and late autumn.
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go scuba diving!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DR-O2-LIg">
-                                <rect key="frame" x="184" y="570" width="186" height="157"/>
+                                <rect key="frame" x="184" y="562" width="186" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upk-Mg-GAK">
+                                <rect key="frame" x="26" y="664" width="368" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.72941176470000002" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">CHEAPEST TIME OF THE YEAR: The cheapest time to visit Italy is usually from december to march. You can also enjoy affordable flights and hotels in early spring and late autumn.
+</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="8Yr-l9-Xjb"/>
                     </view>
                     <navigationItem key="navigationItem" id="wGF-B1-uy1"/>
@@ -552,13 +614,6 @@ The most spoken language in Spain is spanish by all spaniards.
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gER-79-b3d">
-                                <rect key="frame" x="145" y="78" width="125" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIQ-Gn-piE">
                                 <rect key="frame" x="100" y="455" width="214" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -567,6 +622,7 @@ The most spoken language in Spain is spanish by all spaniards.
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="SpainActivitiesButton:" destination="RiX-6U-GbK" eventType="touchUpInside" id="Yss-5e-VzK"/>
                                     <segue destination="dwg-NH-teM" kind="show" id="6pl-4G-j5T"/>
                                 </connections>
                             </button>
@@ -578,6 +634,7 @@ The most spoken language in Spain is spanish by all spaniards.
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="SpainCovidButton:" destination="RiX-6U-GbK" eventType="touchUpInside" id="vTu-3v-p2X"/>
                                     <segue destination="3zV-r9-pI9" kind="show" id="gYQ-Oc-vn6"/>
                                 </connections>
                             </button>
@@ -589,6 +646,7 @@ The most spoken language in Spain is spanish by all spaniards.
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="SpainEssentialsButton:" destination="RiX-6U-GbK" eventType="touchUpInside" id="a9O-iM-TwA"/>
                                     <segue destination="Iu0-H7-7TC" kind="show" id="gag-h6-0Dq"/>
                                 </connections>
                             </button>
@@ -596,11 +654,33 @@ The most spoken language in Spain is spanish by all spaniards.
                                 <rect key="frame" x="43" y="596" width="328" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiG-lq-Tse">
+                                <rect key="frame" x="20" y="20" width="63" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="SpainBackButton:" destination="RiX-6U-GbK" eventType="touchUpInside" id="gUm-Yv-R2G"/>
+                                    <action selector="UKBackButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="iBB-AA-XJx"/>
+                                    <segue destination="aqX-AW-Oxa" kind="show" id="cVX-mx-HnI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🇪🇸Spain🇪🇸" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gER-79-b3d">
+                                <rect key="frame" x="112" y="78" width="191" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="se9-Mh-BKT"/>
                     </view>
                     <navigationItem key="navigationItem" id="8aV-Y0-Nh1"/>
+                    <connections>
+                        <outlet property="SpainHeaderMain" destination="gER-79-b3d" id="UaC-8C-FY4"/>
+                        <outlet property="SpainMainImage" destination="vvb-QH-ysy" id="Zzb-82-516"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oB6-EH-D98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -665,15 +745,6 @@ The most spoken language in Spain is spanish by all spaniards.
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKE-L7-weI">
-                                <rect key="frame" x="27" y="646" width="368" height="206"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">CHEAPEST TIME OF THE YEAR: The cheapest time to visit spain is usually from december to march. You can also enjoy affordable flights and hotels in early spring and late autumn.
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conquer the caminito del rey hike" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jI-FD-SWG">
                                 <rect key="frame" x="11" y="123" width="329" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -681,8 +752,18 @@ The most spoken language in Spain is spanish by all spaniards.
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKE-L7-weI">
+                                <rect key="frame" x="30" y="668" width="368" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.68627450980000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">CHEAPEST TIME OF THE YEAR: The cheapest time to visit Spain is usually from december to march. You can also enjoy affordable flights and hotels in early spring and late autumn.
+</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="wQx-Jh-GL2"/>
                     </view>
                     <navigationItem key="navigationItem" id="BS3-m6-fVT"/>
@@ -717,24 +798,25 @@ The most spoken language in Spain is spanish by all spaniards.
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-fX-Ku4">
-                                <rect key="frame" x="20" y="0.0" width="374" height="704"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-fX-Ku4">
+                                <rect key="frame" x="20" y="309" width="374" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">U.K. lifts travel restrictions on dozens of countries, however, U.S. arrivals still require a 14-day isolation period. For countries that are not the U.S. but are approved, screening is required before entering the U.K.. 
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.68627450980000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">U.K. has lifted travel restrictions on dozens of countries, however, U.S. arrivals still require a 14-day isolation period. For countries that are not the U.S. but are approved, screening is required before entering the U.K.. 
 </string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="r7g-3d-w8T"/>
                     </view>
                     <navigationItem key="navigationItem" id="35M-hU-She"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7X5-Hv-2uS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4243" y="818"/>
+            <point key="canvasLocation" x="-4244.927536231884" y="817.63392857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="URG-Yk-tkW">
@@ -755,17 +837,11 @@ The most spoken language in Spain is spanish by all spaniards.
                                     <segue destination="nRK-BO-T3V" kind="show" animates="NO" id="zTi-fY-XFb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activities " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGk-tw-6Gm">
-                                <rect key="frame" x="79" y="73" width="266" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qol-9l-HP9">
+                                <rect key="frame" x="25" y="160" width="364" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qol-9l-HP9">
-                                <rect key="frame" x="5" y="72" width="404" height="637"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">See a Shakespeare play in his hometown, have tea at betty, visit the Beatles childhood homes, visit the queen palace.  
+                                <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">See a Shakespeare play in his hometown, have tea at betty, visit the Beatles childhood homes, visit the queen palace.  
 
 Roman Baths - Bath, United Kingdom
 Stonehenge - Wales, United Kingdom
@@ -774,13 +850,20 @@ The British Meusem - London, United Kingdom
 London Eye - London, United Kingdom
 
 	CHEAPEST TIME OF THE YEAR: The mid-season is from April to May and early September to October. September through October is a great time of year to get cheap plane tickets to London and it can be the best time to visit.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activities " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGk-tw-6Gm">
+                                <rect key="frame" x="74" y="73" width="266" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="428-6V-G1Z"/>
                     </view>
                     <navigationItem key="navigationItem" id="54S-eI-RBV"/>
@@ -815,9 +898,10 @@ London Eye - London, United Kingdom
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8b-aS-caV">
-                                <rect key="frame" x="10" y="111" width="394" height="247"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8b-aS-caV">
+                                <rect key="frame" x="10" y="111" width="394" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Cultural Norms: tips at restaurants are fully not expected
 It is not customary to hold larger conversations or talk loudly in public.
 Punctuality is important
@@ -829,9 +913,10 @@ Punctuality is important
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfH-6T-z0I">
-                                <rect key="frame" x="10" y="403" width="394" height="247"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfH-6T-z0I">
+                                <rect key="frame" x="10" y="408" width="394" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">English common phrases:
 Hello
 Goodbye
@@ -842,31 +927,25 @@ Bye </string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZr-5x-lpE">
-                                <rect key="frame" x="10" y="183" width="394" height="245"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHs-0n-nnK">
+                                <rect key="frame" x="10" y="582" width="394" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Things to wear in the UK is casual wear. Bring a lightweight sweater or fleece top for warmth. You could also bring a lot of coats. You can wear fancy dresses. </string>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The official language of the United Kingdom is English, which is spoken by approximately 59.8 million residents. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udG-bM-R1g">
-                                <rect key="frame" x="10" y="318" width="394" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHs-0n-nnK">
-                                <rect key="frame" x="10" y="589" width="394" height="247"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Vaccines: The CDC and WHO recommend the following vaccinations for the United Kingdom: hepatitis A, hepatitis B, rabies, meningitis, polio, measles, mumps and rubella (MMR), Tdap (tetanus, diphtheria and pertussis), chickenpox, shingles, pneumonia and influenza.</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The official language of the United Kingdom is English, which is spoken by approximately 59.8 million residents. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udG-bM-R1g">
+                                <rect key="frame" x="10" y="267" width="394" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="OMq-7L-b10"/>
                     </view>
                     <navigationItem key="navigationItem" id="Aoy-XB-8No"/>
@@ -875,16 +954,16 @@ Bye </string>
             </objects>
             <point key="canvasLocation" x="-3430.434782608696" y="1829.4642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--UK View Controller-->
         <scene sceneID="S7c-Dc-snJ">
             <objects>
-                <viewController id="nRK-BO-T3V" customClass="UKViewController" customModule="Voyage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="UK View Controller" id="nRK-BO-T3V" customClass="UKViewController" customModule="Voyage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xjg-cz-Mwn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="United Kingdom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqj-Q0-l4u">
-                                <rect key="frame" x="51" y="81" width="317" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🇬🇧United Kingdom🇬🇧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqj-Q0-l4u">
+                                <rect key="frame" x="18" y="81" width="385" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="37"/>
                                 <nil key="textColor"/>
@@ -898,6 +977,7 @@ Bye </string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="UKCovidButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="PWE-7g-QC1"/>
                                     <segue destination="peA-3S-rCV" kind="show" id="BXJ-9F-nNz"/>
                                 </connections>
                             </button>
@@ -909,6 +989,7 @@ Bye </string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="UKEssentialsButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="CRA-7C-t7y"/>
                                     <segue destination="Pjl-IY-zoR" kind="show" id="uis-ba-QVE"/>
                                 </connections>
                             </button>
@@ -920,6 +1001,7 @@ Bye </string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="UKActivitiesButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="mHv-uJ-SWF"/>
                                     <segue destination="ZdN-XI-pUG" kind="show" id="5e4-bN-T38"/>
                                 </connections>
                             </button>
@@ -927,15 +1009,29 @@ Bye </string>
                                 <rect key="frame" x="60" y="593" width="294" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWf-a1-t4S">
+                                <rect key="frame" x="26" y="20" width="63" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="UKBackButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="L69-mJ-1VO"/>
+                                    <segue destination="aqX-AW-Oxa" kind="show" id="Rj4-65-Y0v"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="KZP-4T-XHT"/>
                     </view>
                     <navigationItem key="navigationItem" id="Gg9-QX-FxI"/>
+                    <connections>
+                        <outlet property="UKMainHeaderTitle" destination="Vqj-Q0-l4u" id="IPy-xo-4bc"/>
+                        <outlet property="UKMainPageImage" destination="EMF-yQ-hRr" id="rsg-WO-R5w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iV4-jK-k0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3446.376811594203" y="1122.9910714285713"/>
+            <point key="canvasLocation" x="-3446.376811594203" y="918.75"/>
         </scene>
         <!--China View Controller-->
         <scene sceneID="86H-HS-Tmj">
@@ -945,21 +1041,15 @@ Bye </string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="China" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-bT-qUJ">
-                                <rect key="frame" x="145" y="70" width="125" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-cU-m0E">
-                                <rect key="frame" x="75" y="205" width="265" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-cU-m0E">
+                                <rect key="frame" x="82" y="230" width="260" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="27"/>
                                 <state key="normal" title="COVID-19 UPDATES">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="ChinaCovidButton:" destination="ut6-bv-wya" eventType="touchUpInside" id="IiX-Uu-g9t"/>
                                     <segue destination="Z4E-lr-fTg" kind="show" id="u66-AA-Qid"/>
                                 </connections>
                             </button>
@@ -971,6 +1061,7 @@ Bye </string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="ChinaEssentialsButton:" destination="ut6-bv-wya" eventType="touchUpInside" id="S7U-kI-i4P"/>
                                     <segue destination="GuT-f4-Y6Y" kind="show" id="TKA-er-wv5"/>
                                 </connections>
                             </button>
@@ -982,6 +1073,7 @@ Bye </string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="ChinaActivitiesButton:" destination="ut6-bv-wya" eventType="touchUpInside" id="jUq-lf-Sn4"/>
                                     <segue destination="Xf7-Je-umQ" kind="show" id="btA-cc-36X"/>
                                 </connections>
                             </button>
@@ -989,15 +1081,37 @@ Bye </string>
                                 <rect key="frame" x="56" y="615" width="316" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCv-NX-gcA">
+                                <rect key="frame" x="25" y="25" width="63" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="ChinaBackButton:" destination="ut6-bv-wya" eventType="touchUpInside" id="BVA-VA-1aN"/>
+                                    <action selector="UKBackButton:" destination="nRK-BO-T3V" eventType="touchUpInside" id="Jp8-2j-dDA"/>
+                                    <segue destination="aqX-AW-Oxa" kind="show" id="CMJ-pZ-E3D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🇨🇳China🇨🇳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-bT-qUJ">
+                                <rect key="frame" x="111" y="72" width="188" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="hbk-Ud-bPz"/>
                     </view>
                     <navigationItem key="navigationItem" id="ijb-8K-2Yw"/>
+                    <connections>
+                        <outlet property="ChinaMainHeader" destination="rvq-bT-qUJ" id="EXo-uX-rmL"/>
+                        <outlet property="ChinaMainImage" destination="kSe-5U-1UN" id="3by-g0-2GH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZV-p1-o0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1852.1739130434785" y="851.78571428571422"/>
+            <point key="canvasLocation" x="-2297.1014492753625" y="832.36607142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1dG-ng-qzC">
@@ -1025,21 +1139,6 @@ Bye </string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o6D-AH-7YJ">
-                                <rect key="frame" x="26" y="29" width="362" height="921"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Level 3 Travel Health Notice: CDC recommends that all travelers avoid all nonessential travel to this country. Most foreign nationals who have been in one of these countries during the previous 14 days will not be allowed to enter the United States. 
-Country Summary: The PRC government has asserted broad authority to prohibit U.S. citizens and citizens of other countries from leaving the PRC by using “exit bans,” sometimes keeping them in the PRC for years. The PRC government uses exit bans:
-• to compel individuals to participate in PRC government investigations,
-• to pressure family members to return to the PRC from abroad, and
-• to aid PRC authorities in resolving civil disputes in favor of PRC national parties.
-In most cases, U.S. citizens only become aware of their exit ban when they attempt to depart the PRC, and there is no reliable mechanism or legal process to find out how long the ban might continue or to contest it. 
-
-</mutableString>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOA-2w-jcO">
                                 <rect key="frame" x="329" y="20" width="59" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1050,8 +1149,22 @@ In most cases, U.S. citizens only become aware of their exit ban when they attem
                                     <segue destination="305-4V-lfT" kind="show" id="nxq-0b-IvS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="27" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o6D-AH-7YJ">
+                                <rect key="frame" x="13" y="119" width="388" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.72941176470588232" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Level 3 Travel Health Notice: CDC recommends that all travelers avoid all nonessential travel to this country. Most foreign nationals who have been in one of these countries during the previous 14 days will not be allowed to enter the United States. 
+Country Summary: The PRC government has asserted broad authority to prohibit U.S. citizens and citizens of other countries from leaving the PRC by using “exit bans,” sometimes keeping them in the PRC for years. The PRC government uses exit bans:
+• to compel individuals to participate in PRC government investigations,
+• to pressure family members to return to the PRC from abroad, and
+• to aid PRC authorities in resolving civil disputes in favor of PRC national parties.
+</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Luz-uU-vYS"/>
                     </view>
                     <navigationItem key="navigationItem" id="d7w-tF-X66"/>
@@ -1079,19 +1192,20 @@ In most cases, U.S. citizens only become aware of their exit ban when they attem
                                     <segue destination="Z4E-lr-fTg" kind="show" id="lkK-v4-GYk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7zk-pm-hJw">
-                                <rect key="frame" x="32" y="0.0" width="362" height="921"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7zk-pm-hJw">
+                                <rect key="frame" x="26" y="67" width="362" height="754"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">U.S. citizens may be detained without access to U.S. consular services or information about their alleged crime. U.S. citizens may be subjected to prolonged interrogations and extended detention for reasons related to “state security.” Security personnel may detain and/or deport U.S. citizens for sending private electronic messages critical of the PRC government.
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.72941176470000002" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">U.S. citizens may be detained without access to U.S. consular services or information about their alleged crime. U.S. citizens may be subjected to prolonged interrogations and extended detention for reasons related to “state security.” Security personnel may detain and/or deport U.S. citizens for sending private electronic messages critical of the PRC government.
 Extra security measures, such as security checks and increased levels of police presence, are common in the Xinjiang Uighur and Tibet Autonomous Regions. Authorities may impose curfews and travel restrictions on short notice.
 The PRC government does not recognize dual nationality. U.S.-PRC citizens and U.S. citizens of Chinese heritage may be subject to additional scrutiny and harassment, and the PRC government may prevent the U.S. Embassy from providing consular services. Read the Safety and Security section on the country information page.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BLS-Aq-KF0"/>
                     </view>
                     <navigationItem key="navigationItem" id="UTR-l4-gmS"/>
@@ -1126,9 +1240,10 @@ The PRC government does not recognize dual nationality. U.S.-PRC citizens and U.
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkE-pg-S6O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkE-pg-S6O">
                                 <rect key="frame" x="20" y="155" width="374" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.47450980392156861" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Great Wall of China - Beijing, China
 Forbidden City - Beijing, China
 Emperor Qinshihuang’s Mausoleum Site - Lintong District, Shaanxi, China
@@ -1139,9 +1254,10 @@ Temple of Heaven - Beijing, China
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mad-IF-u4o">
-                                <rect key="frame" x="10" y="388" width="394" height="323"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mad-IF-u4o">
+                                <rect key="frame" x="10" y="404" width="394" height="279"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.47450980392156861" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">CHEAPEST TIME OF THE YEAR:
 You can find the lowest prices from December to February as the weather drops to freezing in many tourist cities. For bargains with more pleasant temperatures, search for deals between March and April or between October and November when the weather is either warming up or cooling down.
 
@@ -1151,7 +1267,7 @@ You can find the lowest prices from December to February as the weather drops to
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="zaM-pM-b0F"/>
                     </view>
                     <navigationItem key="navigationItem" id="BvQ-Zq-DP9"/>
@@ -1180,23 +1296,25 @@ You can find the lowest prices from December to February as the weather drops to
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Essentials " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6K-Cd-fVG">
-                                <rect key="frame" x="74" y="73" width="266" height="44"/>
+                                <rect key="frame" x="74" y="61" width="266" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEv-MJ-Gay">
-                                <rect key="frame" x="20" y="117" width="374" height="174"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEv-MJ-Gay">
+                                <rect key="frame" x="20" y="102" width="374" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79215686269999996" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Cultural norms: wear more conservative clothing, say ni hao rather than bowing to greet someone, don’t yell at someone or criticize them in public to allow them to lose their face</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwJ-rM-ii0">
-                                <rect key="frame" x="20" y="283" width="394" height="246"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwJ-rM-ii0">
+                                <rect key="frame" x="10" y="284" width="394" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.68627450980392157" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Common phrases:  Do you speak English? (nǐ huì shuō yīng yǔ ma?) 你会说英语吗？
 Where is the bathroom/washroom/toilet? (xǐ shǒu jiān zài nǎ lǐ?) 洗手间在哪里？
  Thank you! (xiè xie) 谢谢！
@@ -1207,16 +1325,17 @@ I’m sorry (duì bu qǐ) 对不起
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-NI-dGI">
-                                <rect key="frame" x="20" y="504" width="361" height="338"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-NI-dGI">
+                                <rect key="frame" x="15" y="538" width="379" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.792156862745098" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Vaccines: All travelers should be up to date on routine vaccines and measles vaccines. China is at risk and recommends that most travellers into the country get hepatitis A and typhoid vaccines. If you are staying for a month or longer, it is recommended that you get vaccines such AS: yellow fever, malaria, polio, hepatitis B, rabies, and Japanese encephalitis</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="RDg-Oi-Dsz"/>
                     </view>
                     <navigationItem key="navigationItem" id="xuK-Zn-7Qi"/>
@@ -1227,13 +1346,14 @@ I’m sorry (duì bu qǐ) 对不起
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uis-ba-QVE"/>
+        <segue reference="HKq-8u-dXd"/>
         <segue reference="u66-AA-Qid"/>
-        <segue reference="aSa-2N-1BE"/>
-        <segue reference="zTi-fY-XFb"/>
-        <segue reference="fmK-bT-r9b"/>
-        <segue reference="gag-h6-0Dq"/>
-        <segue reference="jjv-QT-VMO"/>
+        <segue reference="abG-Ty-9YT"/>
+        <segue reference="NLd-lH-CzH"/>
+        <segue reference="xri-J6-GaD"/>
+        <segue reference="ogm-Iw-dft"/>
+        <segue reference="c2E-zS-kKF"/>
+        <segue reference="CMJ-pZ-E3D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Screen Shot 2020-07-27 at 1.47.05 PM" width="921" height="926"/>

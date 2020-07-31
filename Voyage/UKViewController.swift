@@ -10,6 +10,24 @@ import UIKit
 
 class UKViewController: UIViewController {
 
+    @IBOutlet weak var UKMainHeaderTitle: UILabel!
+    
+    
+    @IBAction func UKCovidButton(_ sender: Any) {
+    }
+    
+    @IBAction func UKEssentialsButton(_ sender: Any) {
+    }
+    
+    @IBAction func UKActivitiesButton(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var UKMainPageImage: UIImageView!
+    
+    @IBAction func UKBackButton(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

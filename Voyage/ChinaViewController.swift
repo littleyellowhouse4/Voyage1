@@ -10,6 +10,26 @@ import UIKit
 
 class ChinaViewController: UIViewController {
 
+    
+    @IBOutlet weak var ChinaMainHeader: UILabel!
+    
+    @IBAction func ChinaBackButton(_ sender: Any) {
+    }
+    
+    
+    
+    @IBAction func ChinaCovidButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func ChinaEssentialsButton(_ sender: Any) {
+    }
+    
+    @IBAction func ChinaActivitiesButton(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var ChinaMainImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

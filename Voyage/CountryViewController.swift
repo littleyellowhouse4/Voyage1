@@ -9,7 +9,31 @@
 import UIKit
 
 class CountryViewController: UIViewController {
+    
+    @IBOutlet weak var WhichCountryText: UILabel!
+    
+    @IBAction func SpainFlagMainButton(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var SpainFlagTitle: UILabel!
+    
+    @IBAction func ItalyFlagMainButton(_ sender: Any) {
+    }
+    @IBOutlet weak var ItalyFlagTitle: UILabel!
+    
+    @IBAction func UKFlagMainButton(_ sender: Any) {
+    }
+    @IBOutlet weak var UKFlagTitle: UILabel!
+    
+    @IBAction func ChinaMainFlagButton(_ sender: Any) {
+    }
+    @IBOutlet weak var ChinaFlagTitle: UILabel!
+    
 
+    @IBAction func CountryBackButton(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

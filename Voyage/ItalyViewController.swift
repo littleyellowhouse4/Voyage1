@@ -10,6 +10,25 @@ import UIKit
 
 class ItalyViewController: UIViewController {
 
+    @IBOutlet weak var ItalyLabel: UILabel!
+    
+    
+    @IBAction func ItalyCovidButton(_ sender: Any) {
+    }
+    
+    @IBAction func ItalyBackButton(_ sender: Any) {
+    }
+    
+    @IBAction func ItalyEssentialsButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func ItalyActivitiesButton(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet weak var ItalyImageMain: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
