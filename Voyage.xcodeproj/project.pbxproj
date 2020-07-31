@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1833510224D21C86006D55F4 /* MediaAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1833510124D21C86006D55F4 /* MediaAssets.xcassets */; };
 		18F6F04F24D1C3330068AFA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F04E24D1C3330068AFA2 /* AppDelegate.swift */; };
 		18F6F05124D1C3330068AFA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F05024D1C3330068AFA2 /* SceneDelegate.swift */; };
 		18F6F05324D1C3330068AFA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F05224D1C3330068AFA2 /* ViewController.swift */; };
 		18F6F05624D1C3330068AFA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6F05424D1C3330068AFA2 /* Main.storyboard */; };
 		18F6F05924D1C3330068AFA2 /* Voyage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F05724D1C3330068AFA2 /* Voyage.xcdatamodeld */; };
-		18F6F05B24D1C3350068AFA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F6F05A24D1C3350068AFA2 /* Assets.xcassets */; };
 		18F6F05E24D1C3350068AFA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6F05C24D1C3350068AFA2 /* LaunchScreen.storyboard */; };
 		18F6F06924D1C3360068AFA2 /* VoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F06824D1C3360068AFA2 /* VoyageTests.swift */; };
 		18F6F07424D1C3360068AFA2 /* VoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F07324D1C3360068AFA2 /* VoyageUITests.swift */; };
@@ -42,13 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1833510124D21C86006D55F4 /* MediaAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MediaAssets.xcassets; sourceTree = "<group>"; };
 		18F6F04B24D1C3330068AFA2 /* Voyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6F04E24D1C3330068AFA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F6F05024D1C3330068AFA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18F6F05224D1C3330068AFA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18F6F05524D1C3330068AFA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18F6F05824D1C3330068AFA2 /* Voyage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Voyage.xcdatamodel; sourceTree = "<group>"; };
-		18F6F05A24D1C3350068AFA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F6F05D24D1C3350068AFA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F6F05F24D1C3350068AFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18F6F06424D1C3360068AFA2 /* VoyageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoyageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,10 +123,10 @@
 				18F6F08D24D1D5240068AFA2 /* ChinaViewController.swift */,
 				18F6F08F24D1D5360068AFA2 /* UKViewController.swift */,
 				18F6F05424D1C3330068AFA2 /* Main.storyboard */,
-				18F6F05A24D1C3350068AFA2 /* Assets.xcassets */,
 				18F6F05C24D1C3350068AFA2 /* LaunchScreen.storyboard */,
 				18F6F05F24D1C3350068AFA2 /* Info.plist */,
 				18F6F05724D1C3330068AFA2 /* Voyage.xcdatamodeld */,
+				1833510124D21C86006D55F4 /* MediaAssets.xcassets */,
 			);
 			path = Voyage;
 			sourceTree = "<group>";
@@ -253,8 +253,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1833510224D21C86006D55F4 /* MediaAssets.xcassets in Resources */,
 				18F6F05E24D1C3350068AFA2 /* LaunchScreen.storyboard in Resources */,
-				18F6F05B24D1C3350068AFA2 /* Assets.xcassets in Resources */,
 				18F6F05624D1C3330068AFA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
